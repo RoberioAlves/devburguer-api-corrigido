@@ -16,6 +16,7 @@ function authMidllewares(request, response, next) {
                 throw new Error();
             }
             request.userId = decoded.id;
+            request.userName = decoded.name;
         });
         // eslint-disable-next-line no-unused-vars
     } catch (err) {
