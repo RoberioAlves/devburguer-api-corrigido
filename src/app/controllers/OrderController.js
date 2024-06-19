@@ -1,6 +1,5 @@
 import * as Yup from "yup";
-import Order from "../schemas/Order";
-
+import Order from '../schemas/Order'
 class OrderController {
     async store(request, response) {
         const schema = Yup.object({
@@ -26,7 +25,7 @@ class OrderController {
                 id: request.userId,
                 name: request.userName,
             }
-        products,
+            products,
         }        
         return response.status(201).json(order);
     }
